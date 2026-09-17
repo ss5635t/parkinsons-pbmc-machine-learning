@@ -142,6 +142,11 @@ parkinsons-pbmc-machine-learning/
 │   └── README.md
 │
 └── figures/
+    ├── pca_development_cohort.png
+    ├── feature_stability.png
+    ├── external_validation_confusion_matrix.png
+    ├── cross_dataset_expression.png
+    └── effect_reproducibility.png
 ```
 
 The raw GEO datasets are not stored directly in this repository. The analysis notebook downloads the required public data from GEO, helping keep the repository lightweight and the workflow reproducible.

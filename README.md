@@ -122,6 +122,7 @@ parkinsons-pbmc-machine-learning/
 │   └── README.md
 │
 └── figures/
+```
 
 The raw GEO datasets are not stored directly in this repository. The analysis notebook downloads the required public data from GEO, helping keep the repository lightweight and the workflow reproducible.
 

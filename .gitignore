@@ -1,0 +1,13 @@
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Raw GEO data files
+*.gz
+
+# Operating system files
+.DS_Store
+Thumbs.db

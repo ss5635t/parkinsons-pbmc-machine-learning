@@ -54,6 +54,10 @@ The analysis followed an end-to-end computational workflow:
 
 ## Key Results
 
+![PCA of the development cohort](figures/pca_development_cohort.png)
+
+*PCA of the GSE22491 development cohort, showing separation between Parkinson's disease and control samples across the first two principal components.*
+
 ### Internal Validation
 
 The development cohort showed very strong separation between Parkinson's disease and control samples.
@@ -62,6 +66,10 @@ The development cohort showed very strong separation between Parkinson's disease
 - The permutation test produced an empirical p-value of **0.0099** using 100 permutations.
 - Performance remained stable across several feature-selection sizes.
 - Feature-stability analysis identified a subset of repeatedly selected probes.
+
+![Feature stability across cross-validation folds](figures/feature_stability.png)
+
+*Selection frequency of the most stable expression probes across repeated cross-validation training folds.*
 
 Because the development dataset contained only 18 samples and thousands of gene-expression features, these results were treated cautiously rather than as evidence of diagnostic performance.
 
@@ -75,7 +83,19 @@ Performance did not generalise to the independent GSE100054 cohort:
 - **ROC-AUC:** 0.333
 - The model classified all 19 external samples as controls.
 
+![External validation confusion matrix](figures/external_validation_confusion_matrix.png)
+
+*Confusion matrix for independent validation on GSE100054. The model correctly classified all 9 control samples but classified all 10 Parkinson's disease samples as controls.*
+
 Further analysis showed substantial cross-dataset expression shifts and weak agreement in Parkinson's disease–control expression effects among the selected genes. Of the 50 selected genes, 27 showed effects in the same direction across datasets, while the overall effect-size correlation was **-0.163**.
+
+![Cross-dataset expression comparison](figures/cross_dataset_expression.png)
+
+*Comparison of mean standardised expression for the 50 selected genes across the GSE22491 development cohort and GSE100054 external cohort, illustrating substantial cross-dataset expression differences.*
+
+![Reproducibility of Parkinson's disease-control expression effects](figures/effect_reproducibility.png)
+
+*Comparison of Parkinson's disease-control expression differences for the 50 selected genes across GSE22491 and GSE100054. The weak negative correlation (r = -0.163) indicates poor reproducibility of the selected-gene effects across cohorts.*
 
 These findings highlight the importance of independent external validation in high-dimensional biomedical machine learning. Excellent internal cross-validation performance in a small cohort may reflect dataset-specific patterns that do not reproduce in an independent cohort.
 
